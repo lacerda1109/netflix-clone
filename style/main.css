@@ -1,0 +1,157 @@
+:root {
+    --vermelho: #e50914;
+    --preto: #141414;
+}
+
+/* CONFIG */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--preto);
+    font-family: 'Roboto';
+    color: white;
+}
+
+/* HEADER */
+header .header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    padding: 0 30px;
+}
+
+header .logo {
+    height: 35px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #aaa;
+    margin-left: 15px;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+/* FILME DESTAQUE */
+.filme-destaque {
+    height: 500px;
+    background: linear-gradient(rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 0.3), rgba(20, 20, 20, 1.0)), url(../img/mrrobot-background.jpeg) no-repeat center top;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.mrrobot-logo {
+    height: 70px;
+}
+
+/* Informações */
+.espec-filme-destaque {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.class-16-anos {
+    height: 20px;
+}
+
+.descricao-filme-destaque {
+    width: 60%;
+    font-size: 18px;
+}
+
+/* Botões */
+.botoes {
+    margin-top: 15px;
+    display: flex;
+}
+
+.botao {
+    border: 0;
+    font-size: 20px;
+    padding: 8px 18px;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.botoes .botao-assistir {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botoes .botao-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao:hover {
+    background-color: rgba(239, 239, 239, 0.8);
+}
+
+/* LISTA DE FILMES */
+.titulo-secao-filmes {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.lista-filmes1 {
+    padding: 0 10px;
+}
+
+@media screen and (max-width: 600px) {
+    /* CABEÇALHO */
+    header .header-box {
+        flex-direction: column;
+    }
+
+    header nav {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    /* FILME DESTAQUE */
+    .mrrobot-logo {
+        height: auto;
+        width: 80%;
+    }
+
+    .filme-destaque {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .conteudo-filme-destaque {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .descricao-filme-destaque {
+        width: 80%;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .botao {
+        font-size: 16px;
+    }
+}
